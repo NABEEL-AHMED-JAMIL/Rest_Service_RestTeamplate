@@ -30,3 +30,6 @@ Below shown are HTTP methods and corresponding RestTemplate methods to handle th
 <li>HTTP OPTIONS : optionsForAllow(String url, String urlVariables)</li>
 <li>HTTP PATCH and others : exchange execute</li>
 </ul>
+
+<h2>Out put</h2>
+https://github.com/NABEEL-AHMED-JAMIL/Rest_Service_RestTeamplate/blob/master/output/
