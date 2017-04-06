@@ -1,0 +1,73 @@
+enum AccountType{
+ SAVING,
+ CHECKING
+}
+
+enum CurrencyType {
+	AFGHANISTAN,
+    EUROPEAN,
+    INDIA,
+    PAKISTAN,
+    AMERICA
+}
+
+enum Gender {
+	MALE, FEMALE
+}
+
+enum TransectionType {
+	CREATE,
+    TRANSFER,
+    DEPOSIT,
+    WITHDRAW,
+    RECEIVE
+}
+
+
+entity Account{
+    accountID Integer,
+	pin Integer,
+	ammount Double,
+	currencyType CurrencyType, 
+	accountType AccountType
+}
+
+relationship ManyToOne{
+    Account{bankBranch} to BankBranch{account}
+}
+entity BankBranch{
+    bankBranchId Integer,
+	name String,
+	location String,
+	description String
+
+}
+entity Customer{
+    customerId Integer,
+	userName String,
+    nric String,
+    passWord String,
+    givenName String,
+	address String,
+	gender Gender,
+	nationality String,
+	dateOfBirth Date,
+    dateOfJoin Date,
+
+}
+
+relationship OneToMany{
+   Customer{accounts} to Account {customer}
+}
+
+entity Transaction{
+
+    transactionId Integer,	
+	custName String,
+	senderAccount Integer,
+	receiverAcount Integer,
+	type TransectionType,
+    ammount Long,
+	transectionTimeAndDate Date
+
+}
