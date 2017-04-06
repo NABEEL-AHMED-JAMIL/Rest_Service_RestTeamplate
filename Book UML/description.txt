@@ -1,0 +1,9 @@
+entity Book {
+    
+    isbn Long,
+    author String,
+    title String,
+    publisher String,
+    date Date
+  
+ }
