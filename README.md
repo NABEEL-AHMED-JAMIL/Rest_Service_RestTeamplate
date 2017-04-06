@@ -33,7 +33,6 @@ Below shown are HTTP methods and corresponding RestTemplate methods to handle th
 
 <h2>Out put</h2>
 https://github.com/NABEEL-AHMED-JAMIL/Rest_Service_RestTeamplate/blob/master/output/
-#
 <h3>Splite the Url</h3>
 <p>
 URI uri = new URI("http://example.com/foo/bar/42?param=true");<br>
@@ -48,3 +47,5 @@ String[] segments = uri.getPath().split("/");<br>
 String idStr = segments[segments.length-1];<br>
 int id = Integer.parseInt(idStr);<br>
 </p>
+<h2>UML</h2>
+<p>You can see the relationship of class in UML folder</p>
